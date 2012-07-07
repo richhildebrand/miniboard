@@ -1,10 +1,16 @@
-﻿var caught = function () {
-   alert("meh");
-};
+﻿var addNewPerson = function () {
+   var name = $('input').val();
 
-$('input').submit( function () {
-   return false;
-});
+
+   $.ajax({
+      type: 'POST',
+      url: 'api/Person',
+      data: { name: name },
+      success: "success",
+      dataType: "xml"
+   });
+
+};
 
 $(".addPerson").click(function () {
    $("#PersonWindow").show();
