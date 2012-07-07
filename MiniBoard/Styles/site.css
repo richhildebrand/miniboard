@@ -85,5 +85,6 @@
    width: 400px;
    border: 2px solid grey;
    background: lightGrey; 
-   display:none;             
+   display:none;
+   padding: 4px;  
 }
