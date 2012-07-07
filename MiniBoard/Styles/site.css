@@ -52,6 +52,12 @@
 }
 
 /* Real App Styles */
+.topLeftNav 
+{
+   float: right;
+   margin-right: 25px;
+}
+
 .boardHeader .boardColumn 
 {
    border-top: 2px solid grey;
