@@ -1,13 +1,16 @@
-﻿@{
+﻿@model IEnumerable<MiniBoard.Models.Person>
+
+@{
     ViewBag.Title = "home";
 }
 
 <div class="topLeftNav">
-   <span>add a Person</span>
+   <span class="addPerson">add a Person</span>
 </div>
 
 <h2>Welcome To Miniboard!</h2>
 
+<div id="PersonWindow">Hello, I am the Person Window. Do people actions here!</div>
 
 <div class="boardHeader">
    <div class="boardColumn">Project Name</div>
@@ -20,6 +23,5 @@
    <div class="teamMember boardColumn lastColumn"></div>
 </div>
 
-
-
 @Scripts.Render("~/Scripts/Custom/DragAndDrop.js")
+@Scripts.Render("~/Scripts/Custom/AddPerson.js")
