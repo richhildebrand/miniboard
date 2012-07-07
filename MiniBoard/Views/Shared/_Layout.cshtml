@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/themes/base/css", "~/Content/css")
+    @Styles.Render("~/Styles/site.css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Scripts/jquery.min.js")
+    @Scripts.Render("~/Scripts/kendo.all.min.js")
 </head>
 <body>
     @RenderBody()
