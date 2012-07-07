@@ -7,14 +7,16 @@ using MiniBoard.Models;
 
 namespace MiniBoard.Controllers
 {
+
     public class homeController : Controller
     {
-        //
-        // GET: /home/
+       private MiniBoardDBCotext db = new MiniBoardDBCotext();
+       
+       // GET: /home/
 
         public ActionResult Index()
         {
-            return View();
+            return View(db.Person.ToList());
         }
     }
 }

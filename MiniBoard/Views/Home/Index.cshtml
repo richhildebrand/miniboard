@@ -10,6 +10,8 @@
 
 <h2>Welcome To Miniboard!</h2>
 
+<div id="ChangeState"></div>
+
 <div id="PersonWindow">
    <p>
       Hello, I am the Person Window. Do people actions here!
@@ -19,6 +21,12 @@
    </form></p>
 </div>
 
+<div id="PeopleList">
+   @foreach (var person in Model)
+   {
+      <div>@Html.DisplayFor(p => person.name)</div>
+   }
+</div>
 
 <div class="boardHeader">
    <div class="boardColumn">Project Name</div>

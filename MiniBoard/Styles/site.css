@@ -58,6 +58,16 @@
    margin-right: 25px;
 }
 
+#PeopleList 
+{
+   float: left;
+   width: 100px;
+   background: lightgrey;
+   border: 2px solid grey;
+   margin: 0px 10px 0px 10px;
+   padding:4px;
+}
+
 .boardHeader .boardColumn 
 {
    border-top: 2px solid grey;
