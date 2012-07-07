@@ -24,7 +24,7 @@
 <div id="PeopleList">
    @foreach (var person in Model)
    {
-      <div>@Html.DisplayFor(p => person.name)</div>
+      <div class="draggable">@Html.DisplayFor(p => person.name)</div>
    }
 </div>
 
@@ -34,10 +34,12 @@
    <div class="boardColumn lastColumn">Team Members</div>
 </div>
 <div>
-   <div class="projectName boardColumn"></div>
-   <div class="teamLead boardColumn"></div>
-   <div class="teamMember boardColumn lastColumn"></div>
+   <div class="projectName boardColumn droptarget"></div>
+   <div class="teamLead boardColumn droptarget"></div>
+   <div class="teamMember boardColumn lastColumn droptarget"></div>
 </div>
+
+
 
 @Scripts.Render("~/Scripts/Custom/DragAndDrop.js")
 @Scripts.Render("~/Scripts/Custom/AddPerson.js")
