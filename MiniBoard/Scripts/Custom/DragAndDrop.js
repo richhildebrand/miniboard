@@ -1,4 +1,9 @@
-﻿$(document).ready(function () {
+﻿var dropOnTarget = function (e) {
+   $(e.target).append(e.draggable.element.clone());
+}
+
+
+$(document).ready(function () {
    var counter = 0;
 
    var msg = function (text, e) {
@@ -13,11 +18,7 @@
    });
 
    $('.droptarget').kendoDropTarget({
-      drop: function (e) { debugger; msg(counter++ + '. dropped on #one', e); }
-   });
-
-   $('#two').kendoDropTarget({
-      drop: function (e) { msg(counter++ + '. dropped on #two'); }
+      drop: dropOnTarget
    });
 });
 
