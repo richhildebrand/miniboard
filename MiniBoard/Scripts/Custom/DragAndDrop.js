@@ -1,19 +1,11 @@
 ﻿var dropOnTarget = function (e) {
-   $(e.target).append(e.draggable.element.clone());
+   $(e.target).closest('.droptarget').append(e.draggable.element.clone());
 }
 
-
 $(document).ready(function () {
-   var counter = 0;
-
-   var msg = function (text, e) {
-      debugger;
-      $('#msg').prepend(text + '<br/>');
-   }
-
    $('.draggable').kendoDraggable({
-      hint: function (item) {
-         return $(item).clone();
+      hint: function (element) {
+         return $(element).clone();
       }
    });
 
@@ -21,7 +13,3 @@ $(document).ready(function () {
       drop: dropOnTarget
    });
 });
-
-
-// .droptarget
-// .draggable
