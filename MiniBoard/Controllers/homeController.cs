@@ -16,7 +16,7 @@ namespace MiniBoard.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Person.ToList());
+           return View(db.Person.ToList());
         }
     }
 }
