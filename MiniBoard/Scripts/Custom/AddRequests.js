@@ -20,11 +20,21 @@
 };
 
 var addNewPerson = function () {
-   var name = $('input').val();
+   var name = $('#NewPersonInputBox').val();
    var url = 'api/Person';
    var data = { Name: name };
    addNewItem(name, url, data);
-}
+};
+
+var addNewProject = function () {
+   var name = $('#NewProjectInputBox').val();
+   var url = 'api/Project';
+   var data = { ProjectName: name,
+                TeamLeads: { PersonID: 4, Name: 'chris' },
+                TeamMembers: { PersonID: 3, Name: 'jim' }
+   };
+   addNewItem(name, url, data);
+};
 
 $(".addPerson").click(function () {
    $("#PersonWindow").show();
