@@ -36,7 +36,7 @@ namespace MiniBoard.Controllers
         // PUT api/Person/5
         public HttpResponseMessage PutPerson(int id, Person person)
         {
-            if (ModelState.IsValid && id == person.personID)
+            if (ModelState.IsValid && id == person.PersonID)
             {
                 db.Entry(person).State = EntityState.Modified;
 
@@ -66,7 +66,7 @@ namespace MiniBoard.Controllers
                 db.SaveChanges();
 
                 HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.Created, person);
-                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = person.personID }));
+                response.Headers.Location = new Uri(Url.Link("DefaultApi", new { id = person.PersonID }));
                 return response;
             }
             else

@@ -9,5 +9,6 @@ namespace MiniBoard.Models
    public class MiniBoardDBCotext : DbContext
    {
       public DbSet<Person> Person { get; set; }
+      public DbSet<Project> Project { get; set; }
    }
 }

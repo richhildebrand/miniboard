@@ -6,7 +6,7 @@ namespace MiniBoard.Models
 {
    public class Person
    {
-      public int personID { get; set; }
-      public string name { get; set; }
+      public int PersonID { get; set; }
+      public string Name { get; set; }
    }
 }
