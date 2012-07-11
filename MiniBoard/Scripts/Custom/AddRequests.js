@@ -27,14 +27,24 @@ var addNewPerson = function () {
    addNewItem(name, url, data);
 };
 
+
 var addNewProject = function () {
    var name = $('#NewProjectInputBox').val();
    var url = 'api/Project';
-   var data = { "ProjectName": name, "TeamLeads": { "PersonID": 1 }, "TeamMembers": [{ "PersonID": 5}] };
+   var data = { "ProjectName": name };
    addNewItem(name, url, data);
 };
+
+//// this really should be a put = > modify Project
+//var addNewProject = function () {
+//   var name = $('#NewProjectInputBox').val();
+//   var url = 'api/Project';
+//   var data = { "ProjectName": name, "TeamLeads": { "PersonID": 1 }, "TeamMembers": [{ "PersonID": 5}] };
+//   addNewItem(name, url, data);
+//};
 
 $(".addPerson").click(function () {
    $("#PersonWindow").show();
 });
 
+ 
