@@ -30,17 +30,7 @@ var addNewPerson = function () {
 var addNewProject = function () {
    var name = $('#NewProjectInputBox').val();
    var url = 'api/Project';
-
-   //   var Person = {};
-   //   Person.Name = name;
-
-   //   var data = {};
-   //   data.ProjectName = name;
-   //   data.TeamLeads = Person;
-
-
-   var data = { "ProjectName": name, "TeamLeads": { "Name": name }, "TeamMembers": [{"Name": name}] };
-
+   var data = { "ProjectName": name, "TeamLeads": { "PersonID": 1 }, "TeamMembers": [{ "PersonID": 5}] };
    addNewItem(name, url, data);
 };
 
