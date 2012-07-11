@@ -9,7 +9,7 @@ namespace MiniBoard.Models
    {
       public int ProjectID { get; set; }
       public string ProjectName { get; set; }
-      public List<Person> TeamLeads { get; set; }
+      public Person TeamLeads { get; set; }
       public List<Person> TeamMembers { get; set; }
    }
 }

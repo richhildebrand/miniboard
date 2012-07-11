@@ -13,6 +13,7 @@
       type: 'POST',
       url: url,
       data: data,
+      dataType: 'json',
       success: onSuccess,
       error: onError,
       dataType: "xml"
@@ -29,10 +30,17 @@ var addNewPerson = function () {
 var addNewProject = function () {
    var name = $('#NewProjectInputBox').val();
    var url = 'api/Project';
-   var data = { ProjectName: name,
-                TeamLeads: { PersonID: 4, Name: 'chris' },
-                TeamMembers: { PersonID: 3, Name: 'jim' }
-   };
+
+   //   var Person = {};
+   //   Person.Name = name;
+
+   //   var data = {};
+   //   data.ProjectName = name;
+   //   data.TeamLeads = Person;
+
+
+   var data = { "ProjectName": name, "TeamLeads": { "Name": name }, "TeamMembers": [{"Name": name}] };
+
    addNewItem(name, url, data);
 };
 
