@@ -1,0 +1,10 @@
+﻿@model IEnumerable<MiniBoard.Models.Project>
+
+@foreach (var project in Model)
+{
+   <div>
+      <div class="projectName boardColumn">@Html.DisplayFor(p => project.ProjectName)</div>
+      <div class="teamLead boardColumn droptarget"></div>
+      <div class="teamMember boardColumn lastColumn droptarget"></div>
+   </div>
+}

@@ -1,0 +1,8 @@
+﻿@model IEnumerable<MiniBoard.Models.Person>
+
+<div id="PeopleList">
+   @foreach (var person in Model)
+   {
+      <div class="draggable">@Html.DisplayFor(p => person.Name)</div>
+   }
+</div>

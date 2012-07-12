@@ -10,13 +10,21 @@ namespace MiniBoard.Controllers
 
     public class homeController : Controller
     {
-       private MiniBoardDBCotext db = new MiniBoardDBCotext();
+      private MiniBoardDBCotext db = new MiniBoardDBCotext();
        
-       // GET: /home/
+      public ActionResult Index()
+      {
+         return View(db);
+      }
 
-        public ActionResult Index()
-        {
-           return View(db.Person.ToList());
-        }
+      public PartialViewResult showPeople()
+      {
+         return PartialView(db.Person.ToList());
+      }
+
+      public PartialViewResult showProjects()
+      {
+         return PartialView(db.Person.ToList());
+      }
     }
 }

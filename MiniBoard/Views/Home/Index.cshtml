@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MiniBoard.Models.Person>
+﻿@model MiniBoard.Models.MiniBoardDBCotext
 
 @{
     ViewBag.Title = "home";
@@ -23,26 +23,20 @@
 
 <div id="ProjectWindow">
    <p><form onsubmit="addNewProject(); return false;">
-      Who would you like to add? <input id="NewProjectInputBox" type=text placeholder="enter name"/>
+      Add a new Project? <input id="NewProjectInputBox" type=text placeholder="Project Name"/>
    </form></p>
 </div>
 
-<div id="PeopleList">
-   @foreach (var person in Model)
-   {
-      <div class="draggable">@Html.DisplayFor(p => person.Name)</div>
-   }
-</div>
+@Html.Partial("showPeople", Model.Person)
 
 <div class="boardHeader">
    <div class="boardColumn">Project Name</div>
    <div class="boardColumn">Team Leads</div>
    <div class="boardColumn lastColumn">Team Members</div>
 </div>
-<div>
-   <div class="projectName boardColumn"></div>
-   <div class="teamLead boardColumn droptarget"></div>
-   <div class="teamMember boardColumn lastColumn droptarget"></div>
+
+<div id="ProjectBucket">
+   @Html.Partial("showProjects", Model.Project)
 </div>
 
 

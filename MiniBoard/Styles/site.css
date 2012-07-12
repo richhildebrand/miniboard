@@ -6,6 +6,8 @@
 
 h2 { margin-left: 10px;}
 
+#ProjectBucket { float: left; }
+
 #PeopleList 
 {
    float: left;
@@ -44,6 +46,12 @@ h2 { margin-left: 10px;}
    border: 2px solid grey;
    background: lightGrey; 
    display:none;
+   margin: 0px 10px 0px 10px;
+   padding: 4px;  
+}
+
+#ProjectWindow 
+{
    margin: 0px 10px 0px 10px;
    padding: 4px;  
 }
